@@ -1,0 +1,33 @@
+Database
+	TableNGUOIDUNG
+		+ Username (nvarchar(50)) PK
+		+ Password (nvarchar(50))
+	TableSTUDENTS
+		+ IDStudent (nvarchar(50))	PK
+		+ Name		(nvarchar(50))
+		+ Age		int
+		+ Class 	(nvarchar(50))
+		+ Address 	(nvarchar(50))
+		+ GPA		int
+	TableClass
+		+ IDClass	(nvarchar(50))	PK
+		+ Name		(nvarchar(50))
+		+ SoLuongSinhVien int
+
+FormLogin
+	+ Đăng nhập
+FormStudents
+	+ Thêm, Sửa, Xoá sinh viên trong db
+FormClass
+	+ Thêm, Sửa, Xoá sinh viên trong db
+
+- Tạo form có thể dùng kéo thả
+- Chú ý nếu phải hiểu ý nghĩa đoạn code
+
+
+Phân chia công việc
+1. Tạo form login + Dựng database (Trần)
+2. Tạo FormStudents (Tuấn)
+3. Tạo FormClass (Long)
+
+Sẽ sử dụng chung một class Database để gọi hàm truy vẫn chứ không viết truy vấn trực tiếp trong code.
