@@ -8,7 +8,7 @@ public class ThreadReadWriteFile extends Thread{
     @Override
     public void run(){
         try {
-            File file = new File("/mnt/LearningAndWorking/Develop/Java/Learning/Core/SystemPrograming/output.txt");
+            File file = new File("/mnt/LearningAndWorking/Develop/Java/Learning/Core/SystemPrograming/File/output.txt");
             FileWriter fileWriter = new FileWriter(file);
             Scanner scanner = new Scanner(System.in);
             String readString = scanner.nextLine();
