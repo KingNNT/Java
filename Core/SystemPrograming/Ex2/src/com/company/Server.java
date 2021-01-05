@@ -2,13 +2,14 @@ package com.company;
 
 import java.io.*;
 import java.net.*;
+import java.util.*;
 
-public class Server {
+public class Server extends TimerTask {
     private static final int PORT = 4567;
     private static final int maxRandom = 10000;
     private static final int initMax = Integer.MIN_VALUE;
 
-    public static void main(String[] args) {
+    public static void handle() {
 
         String sentence_from_client;
         String sentence_to_client;
@@ -33,7 +34,7 @@ public class Server {
                     }
                     outToClient.writeBytes(sentence_to_client);
                     System.out.println(sentence_to_client);
-                    break;
+                    System.exit(0);
                 } else {
                     if (max < numberFromClient) {
                         max = numberFromClient;
@@ -45,7 +46,11 @@ public class Server {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return;
     }
 
+    @Override
+    public void run() {
+        handle();
+    }
 }
-
