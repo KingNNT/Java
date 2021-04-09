@@ -9,6 +9,7 @@ public class Task2 extends Thread{
         Scanner scanner = new Scanner(System.in);
         String str = "";
         while (true) {
+            System.out.println("Task 2: ");
             str = scanner.nextLine();
             if (str.equals("quit")) {
                 break;
